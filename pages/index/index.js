@@ -5,7 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    msg:'Nihao',
+    a:1,
+    b:20,
+    show:false,
+    array:[
+      {id:1,value:"ddd"},
+      {id:3,value:"eee"},
+      {id:2,value:"fff"},
+      {id:4,value:"sss"}
+    ]
   },
 
   /**
@@ -62,8 +71,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  markertap: function (options) {
-    console.log(options)
   }
 })

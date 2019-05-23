@@ -1,3 +1,17 @@
 <!--pages/index/index.wxml-->
 <text>pages/index/index.wxml</text>
 <map bindmarkertap="markertap"></map>
+<text data-test="{{msg}}">{{msg}}</text>
+<text>{{a+b}}</text>
+<text>{{[1,2,3]}}</text>
+<text wx:if="{{show}}">{{[4,2,3]}}</text>
+<view wx:for="{{array}}">
+  {{item.id}}:{{item.value}}
+</view>
+<view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+  {{idx}}:{{itemName.value}}
+</view>
+<block wx:for="{{array}}">
+  <view>{{index}}:</view>
+  <view>{{item.value}}</view>
+</block>
