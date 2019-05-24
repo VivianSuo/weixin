@@ -1,10 +1,17 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/index"
+    "pages/logs/index",
+    "pages/shop/index"
   ],
   "window": {
-    "navigationBarTitleText": "我的小程序"
+    "navigationBarTitleText": "我的小程序",
+    "enablePullDownRefresh":true,
+    "onReachBottomDistance": 100,
+    "onPageScroll":{
+      "scrollTop": 100
+    }
+    
   },
   "tabBar": {
     "color": "#000",

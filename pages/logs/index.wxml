@@ -1,2 +1,5 @@
 <!--pages/logs/index.wxml-->
 <text>pages/logs/index.wxml</text>
+<template name="log">
+  <text>{{text}}</text>
+</template>
