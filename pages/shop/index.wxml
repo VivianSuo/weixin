@@ -1,2 +1,0 @@
-<text>我是购物车页面</text>
-<button bindtap="goBack">回退一下</button>
