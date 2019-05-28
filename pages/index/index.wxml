@@ -2,7 +2,7 @@
 <text hidden="true">pages/index/index.wxml</text>
 <map bindmarkertap="markertap"></map>
 <text data-test="{{msg}}">{{msg}}</text>
-<text>{{a+b}}</text>
+<text style="color:{{color}}">{{a+b}}</text>
 <text>{{[1,2,3]}}</text>
 <text wx:if="{{show}}">{{[4,2,3]}}</text>
 <view wx:for="{{array}}" wx:key="id">
@@ -11,7 +11,7 @@
 <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName" wx:key="id">
   {{idx}}:{{itemName.value}}
 </view>
-<block wx:for="{{array}}" wx:key="id">
+<block wx:for="{{array}}" wx:key="id" bindtap="maopao">
   <view>{{index}}:</view>
   <view>{{item.value}}</view>
 </block>
@@ -33,7 +33,7 @@
   </view>
 </template>
 <template name="a2">
-  <view>
+  <view class="a">
     a2
   </view>
 </template>
@@ -45,4 +45,8 @@
 <!-- 引入某个template is来指定 -->
 <template is="log" data="{{text:log}}"/>
 <!-- 引入整个模块到当前位置 -->
-<include src="../logs/index.wxml" />
+<include src="../logs/index.wxml"/>
+<tag prop-a="{{propa}}" prop-b="{{propb}}" bind:myevent="get_emit" class="outClass" bindtap="gang" id="tag">
+  <view slot="first">我是外部父组件的嵌入slot:first</view>
+  <view slot="sec">我是外部父组件的嵌入slot:sec</view>
+</tag>

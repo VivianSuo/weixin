@@ -30,7 +30,10 @@ Page({
       msg:'我想说',
       time:'2019-5-24'
     },
-    log:'我是log'
+    log:'我是log',
+    color:"#00f0ff",
+    propa:"我是propa",
+    propb:"我是propb"
   },
   switch:function(e){
     const len = this.data.objectArray.length;
@@ -67,6 +70,20 @@ Page({
     },complete(a){
       console.log(a)
     }})
+  },
+  get_emit(e){
+    console.log(e)
+    
+    this.setData({
+      propa:"我变了"+e.detail
+    })
+  },
+  gang(){
+    // selectComponent的参数是一个id需要加#
+    this.selectComponent('#tag')._show();
+  },
+  maopao:function(e){
+    console.log(e)
   },
   onShareAppMessage: function () {
     return {

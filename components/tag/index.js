@@ -1,0 +1,44 @@
+Component({
+  options:{
+    multipleSlots:true,
+    externalClasses:['outClass']
+  },
+  behaviors:[],
+  properties:{//父组件传递过来的属性
+    propA:{
+      type:String,
+      value:''
+    },
+    propB:{
+      type:String
+    }
+  },
+  data:{ //组件的私有属性
+    name:'小孩'
+  },
+  lifetimes:{
+    attached:function(){},
+    moved:function(){},
+    detached:function(){}
+  },
+  attached:function(){},
+  ready:function(){},
+
+  pageLifetimes:{
+    show:function(){},
+    hide:function(){},
+    resize:function(){}
+  },
+  methods:{
+    click:function(){
+      var a = 100;
+      this.triggerEvent('myevent',100)
+    },
+    _show(){
+      console.log('show');
+      this.setData({
+        'name':"大孩"
+      })
+    }
+  }
+})
